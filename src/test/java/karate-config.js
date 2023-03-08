@@ -5,13 +5,17 @@ function fn() {
     env = 'dev';
   }
   var config = {
-    apiUrl: "https://conduit.productionready.io/api/"
-  };
+    apiUrl: 'https://conduit.productionready.io/api/'
+  } 
   if (env == 'dev') {
      config.userEmail = 'denizlili@gmail.com'
      config.userPassword = '12345678'
-  } else if ( 'qa') {
-    // customize
+  }  
+  if (env == 'qa') {
+    config.userEmail = "deniz@gmail.com"
+    config.userPassword = "12345678"
   }
   return config;
 }
+
+//mvn test -Dkarate.options="--tags @debug" -Dkarate.env="dev"

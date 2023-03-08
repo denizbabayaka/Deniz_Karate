@@ -8,7 +8,7 @@ Feature: Articles
         # When method Post
         # Then status 200
         # * def token = response.user.token
-        * def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') {"email": "denizlili@gmail.com","password": "12345678"}
+        * def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') 
         * def token = tokenResponse.authToken
         
  
