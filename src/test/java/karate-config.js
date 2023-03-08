@@ -5,13 +5,12 @@ function fn() {
     env = 'dev';
   }
   var config = {
-    env: env,
-    myVarName: 'someValue'
-  }
+    apiUrl: "https://conduit.productionready.io/api/"
+  };
   if (env == 'dev') {
-    // customize
-    // e.g. config.foo = 'bar';
-  } else if (env == 'e2e') {
+     config.userEmail = 'denizlili@gmail.com'
+     config.userPassword = '12345678'
+  } else if ( 'qa') {
     // customize
   }
   return config;
