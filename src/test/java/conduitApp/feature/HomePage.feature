@@ -1,7 +1,7 @@
 Feature: Test for the home page
 
     Background: Define URL
-        Given url 'https://conduit.productionready.io/api/'
+        Given url 'https://api.realworld.io/api/'
 
 
     Scenario: Get all Tags
@@ -17,7 +17,7 @@ Feature: Test for the home page
         Given path 'articles'
         Given params { limit: 10, offset: 0}
         When method Get
-        Then status 200\
+        Then status 200
         And match response.articles == '#[10]'
         And match response.articlesCount == 197
 
