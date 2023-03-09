@@ -15,7 +15,12 @@ function fn() {
     config.userEmail = "deniz@gmail.com"
     config.userPassword = "12345678"
   }
+
+    var accessToken = karate.callSingle(
+      "classpath:helpers/CreateToken.feature",
+      config
+    ).authToken;
+    karate.configure("headers", { Authorization: "Token " + accessToken });
   return config;
 }
 
-//mvn test -Dkarate.options="--tags @debug" -Dkarate.env="dev"

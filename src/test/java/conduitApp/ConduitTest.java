@@ -24,3 +24,4 @@ class ConduitTest {
 //mvn test -Dkarate.options="--tags @debug" 
 //mvn test -Dkarate.options="--tags ~@skipme" 
 //mvn test -Dkarate.options="classpath:conduitApp/feature/HomePage.feature:7" 
+//mvn test -Dkarate.options="--tags @debug" -Dkarate.env="dev" ==run with env 
