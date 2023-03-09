@@ -16,6 +16,7 @@ Feature: Sign Up
       
         * configure ssl = true                    
         Given path 'users'
+        * print randomEmail
         # And request {"user":{"email":"#(userData.email)","password":"12345678","username":"#(userData.username)"}}
         And request
         """
