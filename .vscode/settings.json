@@ -1,3 +1,4 @@
 {
-  "karateRunner.karateRunner.default": "Karate.Run"
+  "karateRunner.karateRunner.default": "Karate.Run",
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

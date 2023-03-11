@@ -9,7 +9,7 @@ Feature: Sign Up
     Given url apiUrl 
 
 
- @debug
+
     Scenario:Sign Up new User 
         Given def userData = {"email":"danielil@gmail.com","username":"denizKarate"}
 

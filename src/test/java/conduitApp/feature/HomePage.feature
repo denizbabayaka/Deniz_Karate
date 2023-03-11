@@ -63,4 +63,18 @@ Feature: Test for the home page
             }
         """
 
-     
+    Scenario: Conditional logic
+        Given params {limit: 10, offset: 0}
+        Given path 'articles'
+        When method Get
+        Then status 200
+        * def favoriteCount = response.articles[0].favoritesCount
+        * def article = response.articles[0] 
+
+        * if(favoritesCount == 0)karate.call('classpath:helpers/AddLikes.feature' article)
+
+        Given params {limit: 10, offset: 0}
+        Given path 'articles'
+        When method Get
+        Then status 200
+        And match response.article[0].fovoritesCount == 1 
